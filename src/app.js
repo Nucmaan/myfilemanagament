@@ -33,7 +33,8 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(express.urlencoded({ limit: "10mb", extended: true }));
+app.use(express.urlencoded({ limit: "5gb", extended: true }));
+app.use(express.json({ limit: "5gb" }));
 
 app.use("/public", express.static("public"));
 
